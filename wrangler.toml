@@ -8,17 +8,17 @@ preview_urls = true
 # The dash-managed route only covers mcp.draw.io/mcp* — /carousel/* needs
 # its own route or requests 522 against a nonexistent origin.
 routes = [
-  { pattern = "mcp.alfameg.org/mcp*", zone_name = "alfameg.org" },
-  { pattern = "mcp.alfameg.org/carousel/*", zone_name = "alfameg.org" },
-  { pattern = "mcp.alfameg.org/.well-known/*", zone_name = "alfameg.org" },
-  { pattern = "mcp.alfameg.org/demo/*", zone_name = "alfameg.org" },
-  { pattern = "mcp.alfameg.org/health", zone_name = "alfameg.org" },
-  { pattern = "mcp.alfameg.org/favicon.ico", zone_name = "alfameg.org" },
-  { pattern = "mcp.alfameg.org/favicon.png", zone_name = "alfameg.org" }
+  { pattern = "web-search-mcp.alfameg.org/mcp*", zone_name = "alfameg.org" },
+  { pattern = "web-search-mcp.alfameg.org/carousel/*", zone_name = "alfameg.org" },
+  { pattern = "web-search-mcp.alfameg.org/.well-known/*", zone_name = "alfameg.org" },
+  { pattern = "web-search-mcp.alfameg.org/demo/*", zone_name = "alfameg.org" },
+  { pattern = "web-search-mcp.alfameg.org/health", zone_name = "alfameg.org" },
+  { pattern = "web-search-mcp.alfameg.org/favicon.ico", zone_name = "alfameg.org" },
+  { pattern = "web-search-mcp.alfameg.org/favicon.png", zone_name = "alfameg.org" }
 ]
 
 [build]
-command = "node src/build-html.js"
+command = "node dist/index.js"
 
 # Static assets (directory listing in the connectors-directory carousel).
 # Requests matching a file under public/ are served directly; everything
